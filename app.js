@@ -1,5 +1,17 @@
 
-//Start the game    
+//Start the game
+let pin = prompt("Set limit.");
+if (pin == null) {
+  alert("You pressed cancel, leave this page");
+} else {
+  pin = parseInt(pin);
+  if (isNaN(pin)) {
+    console.log(pin);
+    alert("Please input a number.");
+  } else {
+   document.querySelector(".limit p").innerText = pin; 
+  }
+}    
 
 const match = document.querySelector('.match');
 
